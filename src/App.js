@@ -1,70 +1,40 @@
-import React from 'react'
-import About from './About'
-import AboutStudent from './AboutStudent'
-import Home from './Home'
+import React, { useState, useEffect} from 'react'
+import MarvelHeader from "./marvel_header.jpg"
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect
-} from "react-router-dom";
 
-const App = () => (
-  <Router>
+const App = () => {
+
+  const [marvelData, setData] = useState(null)
+
+  const url = "http://gateway.marvel.com/v1/public/characters?ts=1&apikey=281dfdf14f67bfaefa6852a403b1c138&hash=e64a7d31e8a4f7d43a0a3f3eb40115e8"
+
+  const fetchMarvelApi =  async () => {
+
+    const res = await fetch(url)
+
+    const nextData = await res.json()
+
+    setData(nextData)
+  }
+
+  
+
+  useEffect(() => {
+
+    fetchMarvelApi()
+  },[])
+  
+
+
+
+
+  return (
+    <header> <img src={MarvelHeader} ></img></header>
     
-  <div>
-    
-    <Link to="/">Home</Link>
-    {' '}
-    <Link to="/about">About</Link>
-    {' '}
-    <Link to="/about/Juan">About Juan</Link>
-    <Link to="/about/Ryan">About Ryan</Link>
-    </div>
+    <p>The Website is Working..................................................................................................................................bitches.</p>
 
-    <Switch>
-
-      <Route path="/" exact>
-        
-        <Home />
-        
-      </Route>
-
-      <Route path="/about" exact>
-      
-        <About />
-        
-      </Route>
-
-      <Route path="/about/:studentName" exact>
-          
-          <AboutStudent />
-      
-      </Route>
-
-      <Route path ="/home" exact>
-
-      <Redirect to='/'/>
-        
-      </Route>
-
-      <Route path ="/home" exact>
-
-        <Redirect to='/' />
-        
-      </Route>
-      
-      <Route path='/'>
-
-          <h1>Page Not Found</h1>
-
-      </Route>
-
-    </Switch>
-
-  </Router>
-)
+  )
+  
+}
 
 export default App
