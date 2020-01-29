@@ -1,5 +1,6 @@
-import React, { useState, useEffect} from 'react'
-import MarvelHeader from "./marvel_header.jpg"
+import React, { useState, useEffect} from 'react';
+import HeaderImage from "./marvel_header.jpg";
+import './App.css';
 
 
 const App = () => {
@@ -29,9 +30,39 @@ const App = () => {
 
 
   return (
-    <header> <img src={MarvelHeader} ></img></header>
-    
-    <p>The Website is Working..................................................................................................................................bitches.</p>
+    <div className="Wrapper-Div">
+      
+      {/*<header >
+
+          <img src={HeaderImage} className="headerImage"/> 
+        sdsdfd
+      </header>*/}
+
+      <div className="Hero-Card">
+
+
+
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div className="random">
+
+        <p >The Website is Working..................................................................................................................................bitches.
+
+        </p>
+
+      </div>
+
+    </div>
 
   )
   
