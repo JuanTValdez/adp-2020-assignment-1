@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import Button from '@material-ui/core/Button'
-import HeaderImage from "./marvel_header.jpg";
+import Header from './Header'
 import './App.css';
 
 
@@ -29,13 +29,18 @@ const App = () => {
     
   },[])
   
-  
+  function handleDataGen()
+  {
+
+    console.log("Cocaine smells good!")
+
+  }
   
   /*marvelData && console.log(marvelData.data.results[0].thumbnail.extension)
   console.log(marvelData.data.results[0].name)*/
   if(!marvelData){
       return(
-        <Button variant="contained" color="secondary">
+        <Button onClick={handleDataGen} variant="contained" color="secondary">
         Generate
       </Button>
       )
@@ -44,51 +49,22 @@ const App = () => {
 
   return (
     <div className="Wrapper-Div">
-      
-      {/*<header >
 
-          <img src={HeaderImage} className="headerImage"/> 
-        sdsdfd
-      </header>*/}
+        <Header/>     
       
       <div className="Hero-Card">
 
           <div className="Hero-Info">
 
-            
-          {marvelNullChecker ? 
-              <img className="Hero-Image" src={marvelData.data.results[1].thumbnail.path + "/portrait_medium" + ".jpg"} /> 
-              
-              : console.log("No Data")}
-              
-              
 
+          
+              <img className="Hero-Image" src={marvelData.data.results[1].thumbnail.path + "/portrait_medium" + ".jpg"} />
+              
               
           </div>
         
       </div>
-      
-      
-      
-      
-      
-      
-
-
-
-
-      
-      
-      
-      
-      
-      <div className="random">
-
-        <p >The Website is Working..................................................................................................................................bitches.
-
-        </p>
-
-      </div>
+    
 
     </div>
 
