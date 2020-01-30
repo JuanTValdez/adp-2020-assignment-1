@@ -3,6 +3,12 @@ html{
     background-color: #000033;
 }
 
+.Wrapper-Div{
+
+    display: block;
+
+}
+
 .random{
     color: red
 }
@@ -14,6 +20,7 @@ html{
     top: 50px;
     background-color: #2e2e33;
     border: 2px solid #fb002a;
+    border-radius: 5%;
     height: 750px;
     width: 350px;
 }
@@ -43,7 +50,7 @@ html{
 .Border-Radius{
 
     border: 2px solid #fb002a;
-    border-radius: 10%
+    border-radius: 10%;
 }
 
 .Grid-Container{
@@ -51,7 +58,14 @@ html{
     display: inline-block;
      background-color: #3a3a37;  
      padding: 25px 10px; 
-    height: 648px;
+    height: 100vh;
+     /* height: 648px; */
     width:  1334px;
+}
+
+.Hero-Description{
+
+    font-size: 20px;
+    color:white;
 }
 
