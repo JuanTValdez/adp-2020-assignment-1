@@ -1,24 +1,35 @@
+html{
+
+    background-color: #000033;
+}
+
 .random{
     color: red
 }
 
 .Hero-Card{
 
-    background-color: #3F4354;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #bfa57a;
+    position: fixed;
+    right: 10px;   
+    background-color: #2e2e33;
+    border: 2px solid #dcca98;
     border-radius: 10%;
     height: 225px;
-    width: 149px;
+    width: 120px;
 }
 
-header{
+.Hero-Info{
+
     
 }
 
-.headerImage{
+.Hero-Image{
 
+    position: absolute;
+    margin: 8px 8px;
     
+    border: 1px solid #DCCA98;
+    border-radius: 10%;
+
 }
 
