@@ -9,25 +9,25 @@ html{
 
 .Hero-Card{
 
+    display: inline-block;
     position: relative;
-    /*right: 10px;*/
-    margin: 10px 575px;   
+    top: 50px;
     background-color: #2e2e33;
     border: 2px solid #fb002a;
-    height: 225px;
-    width: 120px;
+    height: 750px;
+    width: 350px;
 }
 
 .Hero-Info{
 
     display: block;
-    
+    padding: 10px 25px;
 }
 
 .Hero-Image{
 
     position: absolute;
-    margin: 8px 8px;
+    
     
     /* border: 1px solid #fb002a; */
     
@@ -42,7 +42,16 @@ html{
 
 .Border-Radius{
 
-    border: 1px solid #fb002a;
+    border: 2px solid #fb002a;
     border-radius: 10%
+}
+
+.Grid-Container{
+
+    display: inline-block;
+     background-color: #3a3a37;  
+     padding: 25px 10px; 
+    height: 648px;
+    width:  1334px;
 }
 

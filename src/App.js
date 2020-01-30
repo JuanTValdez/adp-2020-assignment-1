@@ -56,28 +56,30 @@ const App = () => {
 
         <Header/>     
 
-
-        <Grid container spacing={2}>
+          <div className="Grid-Container">
+            <Grid container spacing={2}>
           
-          {marvelData.data.results.map((item, i) => (
+            {marvelData.data.results.map((item, i) => (
             
-            <Grid item>
+                <Grid item>
 
-                <img className="Grid-Images" className="Border-Radius" src={item.thumbnail.path + "/standard_small" + "." + item.thumbnail.extension} />
-                {console.log(item.thumbnail.extension)}
-            </Grid>
-          ))
+                  <img className="Grid-Images" className="Border-Radius" src={item.thumbnail.path + "/standard_large" + "." + item.thumbnail.extension} />
+                   {console.log(item.thumbnail.extension)}
+                </Grid>
+             ))
 
-          }
+             }
 
 
-        </Grid>
+           </Grid>
+        
+        </div>
       
       <div className="Hero-Card" >
 
           <div className="Hero-Info">
 
-              <img className="Hero-Image" className="Border-Radius" src={marvelData.data.results[randomCard].thumbnail.path + "/portrait_medium" + ".jpg"} />
+              <img className="Hero-Image" className="Border-Radius" src={marvelData.data.results[randomCard].thumbnail.path + "/portrait_uncanny" + ".jpg"} />
               
           </div>
 

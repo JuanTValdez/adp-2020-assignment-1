@@ -1,11 +1,13 @@
 header{
 
-    padding: 1x;
+    padding: 15px;
+    font-size: 1.5rem;
     background-color: #fb002a;
     
 }
 .Header-Title{
 
     text-align: center;
+    
     color: white;
 }
