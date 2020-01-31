@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid';
 import Header from './Header'
+import HeroGrid from './HeroGrid'
 import './App.css';
 
 const randomCard = Math.floor(Math.random() * Math.floor(20));
@@ -56,24 +57,30 @@ const App = () => {
 
         <Header/>     
 
-          <div className="Grid-Container">
+          <div className="HeroGrid">
+
+            <HeroGrid marvelData={marvelData}/>
+
+          </div>
+
+
+
+
+
+          {/* <div className="Grid-Container">
             <Grid container spacing={2}>
           
-            {marvelData.data.results.map((item, i) => (
+              {marvelData.data.results.map((item, i) => (
             
                 <Grid item>
-
-                  <img className="Grid-Images" className="Border-Radius" src={item.thumbnail.path + "/standard_large" + "." + item.thumbnail.extension} />
-                   
+                    <img className="Grid-Images" className="Border-Radius" src={item.thumbnail.path + "/standard_large" + "." + item.thumbnail.extension} />
                 </Grid>
-             ))
+              ))
 
              }
-
-
-           </Grid>
+             </Grid>
         
-        </div>
+          </div> */}
       
       <div className="Hero-Card" >
 
