@@ -1,13 +1,11 @@
-header{
-
-    padding: 15px;
-    font-size: 1.5rem;
-    background-color: #fb002a;
-    
+header {
+  /* x padding: 15px; */
+  font-size: 1.5rem;
+  background-color: #f5002c;
+  border: 2px solid white;
 }
-.Header-Title{
+.Header-Title {
+  text-align: center;
 
-    text-align: center;
-    
-    color: white;
+  color: white;
 }

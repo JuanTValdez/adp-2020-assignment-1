@@ -1,0 +1,65 @@
+html {
+  background-color: #000033;
+}
+
+.Wrapper-Div {
+  display: block;
+}
+
+.random {
+  color: red;
+}
+
+.Hero-Card {
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  background-color: #2e2e33;
+  border: 2px solid #fb002a;
+  border-radius: 5%;
+  height: 750px;
+  width: 350px;
+}
+
+.Hero-Info {
+  display: block;
+  padding: 10px 25px;
+}
+
+.Hero-Image {
+  position: absolute;
+
+  /* border: 1px solid #fb002a; */
+}
+
+.Grid-Images {
+  border: 1px solid #fb002a;
+}
+
+.Border-Radius {
+  border: 2px solid #fb002a;
+  border-radius: 10%;
+}
+
+.Grid-Container {
+  display: inline-block;
+  right: 1px;
+  margin: 10px 85px;
+  background-color: #3a3a37;
+  padding: 25px 150px;
+  border: 1px solid #fb002a;
+  width: 1229px;
+}
+
+.Hero-Description {
+  font-size: 20px;
+  color: white;
+}
+
+.Gen-Button {
+  background: #fb002a;
+  color: white;
+  padding: 50px 100px;
+  margin: 25% 35%;
+  border-radius: 10%;
+}
