@@ -5,9 +5,12 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 function HeroGrid(props) {
   return (
     <div className="Grid-Container">
-      <Grid container justify="center" spacing={6}>
+     
+      <Grid container justify="center" spacing={3}>
         {props.marvelData.data.results.map((item, i) => (
+           
           <Link to={`/${item.id}`}>
+            
             <Grid item>
               <img
                 className="Grid-Images"
@@ -20,9 +23,12 @@ function HeroGrid(props) {
                 }
               />
             </Grid>
-          </Link>
+           
+           </Link>
         ))}
+      
       </Grid>
+
     </div>
   );
 }
