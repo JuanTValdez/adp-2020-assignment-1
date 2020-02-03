@@ -41,19 +41,7 @@ const App = () => {
         <HeroGrid marvelData={marvelData} />
 
       </div>
-
-
-      {/* <div className="Hero-Card" >
-
-          <div className="Hero-Info">
-
-              <img className="Hero-Image" className="Border-Radius" src={marvelData.data.results[randomCard].thumbnail.path + "/portrait_uncanny" + ".jpg"} />
-              <p className= "Hero-Description"> Name:  {marvelData.data.results[randomCard].name} </p>
-              <p className="Hero-Description"> Bio: {marvelData.data.results[randomCard].description}  </p>
-              
-          </div>
-
-      </div> */}
+      
     </div>
   );
 };

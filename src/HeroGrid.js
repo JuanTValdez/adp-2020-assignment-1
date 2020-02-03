@@ -8,13 +8,13 @@ function HeroGrid(props) {
      
       <Grid container justify="center" spacing={3}>
         {props.marvelData.data.results.map((item, i) => (
-           
+           <Grid item>
           <Link to={`/${item.id}`}>
             
-            <Grid item>
+            
               <img
-                className="Grid-Images"
-                className="Border-Radius"
+                className="Grid-Images Border-Radius-Red"
+              
                 src={
                   item.thumbnail.path +
                   "/standard_xlarge" +
@@ -22,9 +22,10 @@ function HeroGrid(props) {
                   item.thumbnail.extension
                 }
               />
-            </Grid>
+            
            
            </Link>
+           </Grid>
         ))}
       
       </Grid>

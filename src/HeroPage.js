@@ -12,7 +12,7 @@ const HeroPage = () => {
 
     const url =
      `http://gateway.marvel.com/v1/public/characters/${id}?ts=1&apikey=281dfdf14f67bfaefa6852a403b1c138&hash=e64a7d31e8a4f7d43a0a3f3eb40115e8`;
-        // fetch goes here
+       
 
         const fetchApi = async () => {
         const res = await fetch(url);
@@ -38,26 +38,39 @@ const HeroPage = () => {
           
         );
       }
-    
+      
+      console.log(marvelData.data.results[0].comics.items[0].name)
+     
       
     return(
 
-        <div className="Div-Wrapper">
-            <Header/>  
+        <div className="Container">
+                <Header/>  
 
-            <div className="Hero-Card" >
-                {console.log(marvelData.data.results[0].name)}
-                <div className="Hero-Info">
-                
-                
-                <img className="Hero-Image" className="Border-Radius" src={marvelData.data.results[0].thumbnail.path + "/portrait_uncanny" + ".jpg"} />
-                <p className= "Hero-Description"> Name:  {marvelData.data.results[0].name} </p>
-                <p className="Hero-Description"> Bio: {marvelData.data.results[0].description}  </p>
-                
-            </div>  
+            <div className="Wrapper-Div">
 
-            </div> 
+                <div className="Hero-Card Border-Radius-Red" >
+                    
+                    <div className="Hero-Info">
+                    
+                    
+                        <img className="Hero-Image" className="Border-Radius" src={marvelData.data.results[0].thumbnail.path + "/portrait_uncanny" + ".jpg"} />
+                        <p className= "Hero-Description"> Name:  {marvelData.data.results[0].name} </p>
+                        <p className="Hero-Description"> Bio: {marvelData.data.results[0].description}  </p>
+                    
+                    </div>  
 
+                    
+                </div> 
+                
+                <div className="Hero-Details">
+                <h1> Comics </h1>
+                    
+
+                </div>
+
+            </div>
+           
         </div>
 
  
