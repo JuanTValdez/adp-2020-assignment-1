@@ -3,9 +3,16 @@ header {
   font-size: 1.5rem;
   background-color: #f5002c;
   border: 2px solid white;
+  margin: 0 auto;
 }
 .Header-Title {
   text-align: center;
   
   color: white;
+}
+
+h1{
+
+  text-align: center;
+  text-decoration: underline;
 }

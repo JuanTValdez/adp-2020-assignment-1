@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import HeroGrid from "./HeroGrid";
-import "./Home.css";
 import { BrowserRouter as Router } from "react-router-dom";
 
 
@@ -33,7 +32,7 @@ const App = () => {
   }
 
   return (
-    <div className="Wrapper-Div">
+    <div className="Wrapper">
       <Header />
 
       <div className="HeroGrid">

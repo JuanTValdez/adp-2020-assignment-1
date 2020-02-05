@@ -56,7 +56,7 @@ html {
 .Hero-Details{
   /* display: inline; */
   
-  border: 2px solid white;
+  border: 2px solid red;
   margin: 40px auto;
   width: 1300px;
   font-size: 18px;

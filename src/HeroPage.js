@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import useStyles from "./HeroPageStyles";
+import { Grid } from "@material-ui/core";
 import Header from "./Header";
+import "./Home.css";
 
 const HeroPage = () => {
 
     const [marvelData, setData] = useState(null);
-    const classes = useStyles()
     const { id } = useParams()
 
 
@@ -41,10 +41,12 @@ const HeroPage = () => {
       
       console.log(marvelData.data.results[0].comics.items[0].name)
      
+     
       
     return(
 
         <div className="Container">
+                
                 <Header/>  
 
             <div className="Wrapper-Div">
@@ -63,9 +65,51 @@ const HeroPage = () => {
                     
                 </div> 
                 
-                <div className="Hero-Details">
-                <h1> Comics </h1>
+                <div className="Hero-Details Border-Radius-Red" >
+                    <h1> Comics </h1>
+
+                        <Grid container justify="center" spacing={3}>
+                             {marvelData.data.results[0].comics.items.map((item, j) => (
+
+                            <Grid className='Border-Radius-Red' key={j} item>
+                                
+                                <p >{item.name}</p>
+            
+                            </Grid>
+                            ))}
+      
+                        </Grid>
+
+
+                    <h1> Stories </h1>
+
+                            <Grid container justify="center" spacing={3}>
+                                {marvelData.data.results[0].stories.items.map((item, k) => (
+                                        
+                                <Grid className='Border-Radius-Red' key={k} item>
+
+                                    <p>{item.name}</p>
+
+                                </Grid>     
+                                ))}
+                            
+                            </Grid>   
+                        
+
+                    <h1> Series </h1>
                     
+
+                            <Grid container justify="center" spacing={3}>
+                                {marvelData.data.results[0].series.items.map((item,l) => (
+
+                                <Grid className='Border-Radius-Red' key={l} item>
+
+                                    <p> {item.name} </p>
+                                
+                                </Grid>
+                                ))}
+
+                            </Grid>
 
                 </div>
 

@@ -8,7 +8,7 @@ function HeroGrid(props) {
      
       <Grid container justify="center" spacing={3}>
         {props.marvelData.data.results.map((item, i) => (
-           <Grid item>
+           <Grid key={i} item>
           <Link to={`/${item.id}`}>
             
             
