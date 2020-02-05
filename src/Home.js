@@ -3,7 +3,6 @@ import Header from "./Header";
 import HeroGrid from "./HeroGrid";
 import { BrowserRouter as Router } from "react-router-dom";
 
-
 const App = () => {
   const [marvelData, setData] = useState(null);
 
@@ -22,12 +21,11 @@ const App = () => {
     fetchMarvelApi();
   }, []);
 
- 
   if (!marvelData) {
     return (
-      
-
-      <button className="Gen-Button"><b>Generating Data...</b></button>
+      <button className="Gen-Button">
+        <b>Generating Data...</b>
+      </button>
     );
   }
 
@@ -36,11 +34,8 @@ const App = () => {
       <Header />
 
       <div className="HeroGrid">
-        
         <HeroGrid marvelData={marvelData} />
-
       </div>
-      
     </div>
   );
 };

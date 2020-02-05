@@ -3,15 +3,12 @@ html {
 }
 
 .Wrapper-Div {
-  
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
 }
 
 .Hero-Card {
-  
   display: inline-block;
   position: relative;
   top: 40px;
@@ -53,9 +50,9 @@ html {
   font-size: 20px;
   color: white;
 }
-.Hero-Details{
+.Hero-Details {
   /* display: inline; */
-  
+
   border: 2px solid red;
   margin: 40px auto;
   width: 1300px;

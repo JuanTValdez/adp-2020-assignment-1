@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./Home";
-import HeroPage from "./HeroPage"
+import HeroPage from "./HeroPage";
 
 const App = () => {
   return (
@@ -11,11 +11,8 @@ const App = () => {
       </Route>
 
       <Route path="/:id">
-        
-         <HeroPage /> 
-        
+        <HeroPage />
       </Route>
-      
     </Router>
   );
 };
