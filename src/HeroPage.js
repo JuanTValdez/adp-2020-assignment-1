@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Grid } from "@material-ui/core";
+//import { Button } from '@material-ui/core';
 import Header from "./Header";
 import ComicsList from './ComicsList.js'
 import StoriesList from './StoriesList.js'
 import SeriesList from './SeriesList.js'
+import HeroCard from './HeroCard.js'
 import "./Home.css";
 
 const HeroPage = () => {
@@ -29,11 +30,18 @@ const HeroPage = () => {
 
   // Notifies user data is being loaded
 
+  // if (!marvelData) {
+  //   return (
+  //     <button className="Gen-Button">
+  //       <b>Generating Data...</b>
+  //     </button>
+  //   );
+  // }
+
   if (!marvelData) {
     return (
-      <button className="Gen-Button">
-        <b>Generating Data...</b>
-      </button>
+      
+      <p className="Gen-Data">Generating Data...</p>
     );
   }
 
@@ -41,36 +49,12 @@ const HeroPage = () => {
     <div className="Container">
       <Header />
 
+      
       <div className="Wrapper-Div">
-        <div className="Hero-Card Border-Radius-Red">
-          <div className="Hero-Info">
-            
-            {/* Places clicked hero image onto card          */}
 
-            <img
-              className="Hero-Image"
-              className="Border-Radius"
-              src={
-                marvelData.data.results[0].thumbnail.path +
-                "/portrait_uncanny" +
-                ".jpg"
-              }
-            />
+          {/* Generates Hero Card*/}
 
-            {/* Generates Hero name and Description */}
-
-            <p className="Hero-Description">
-              {" "}
-              Name: {marvelData.data.results[0].name}{" "}
-            </p>
-            <p className="Hero-Description">
-              {" "}
-              Bio: {marvelData.data.results[0].description}{" "}
-            </p>
-          </div>
-        </div>
-
-        
+          <HeroCard marvelData={marvelData}/>
 
         <div className="Hero-Details Border-Radius-Red">
             

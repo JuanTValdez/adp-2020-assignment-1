@@ -21,17 +21,28 @@ const App = () => {
     fetchMarvelApi();
   }, []);
 
+  // if (!marvelData) {
+  //   return (
+  //     <button className="Gen-Button">
+  //       <b>Generating Data...</b>
+  //     </button>
+  //   );
+  // }
+
   if (!marvelData) {
     return (
-      <button className="Gen-Button">
-        <b>Generating Data...</b>
-      </button>
+      <p className="Gen-Data">Generating Data...</p>
     );
   }
 
   return (
     <div className="Wrapper">
+    
+      
       <Header />
+
+
+
 
       <div className="HeroGrid">
         <HeroGrid marvelData={marvelData} />

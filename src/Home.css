@@ -11,10 +11,11 @@ html {
 .Hero-Card {
   display: inline-block;
   position: relative;
+  height: 100%;
+  width: 350px;
   top: 40px;
   left: 40px;
   background-color: #2e2e33;
-  width: 350px;
 }
 
 .Hero-Info {
@@ -60,7 +61,8 @@ html {
   color: white;
 }
 
-.Gen-Button {
+.Gen-Data {
+  text-align: center;
   background: #fb002a;
   color: white;
   font-size: 21px;
