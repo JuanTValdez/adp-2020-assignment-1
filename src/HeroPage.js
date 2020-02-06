@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Grid } from "@material-ui/core";
 import Header from "./Header";
+import ComicsList from './ComicsList.js'
+import StoriesList from './StoriesList.js'
+import SeriesList from './SeriesList.js'
 import "./Home.css";
 
 const HeroPage = () => {
@@ -72,39 +75,17 @@ const HeroPage = () => {
         <div className="Hero-Details Border-Radius-Red">
             
             {/* Generates a list of comics the hero appears in */}
-          <h1> Comics </h1>
 
-          <Grid container justify="center" spacing={3}>
-            {marvelData.data.results[0].comics.items.map((item, j) => (
-              <Grid  key={j} item>
-                <p> |  {"   " + item.name + "   "} | </p>
-              </Grid>
-            ))}
-          </Grid>
+             <ComicsList marvelData={marvelData} />
+          
+            {/* Generates a list of stories the hero appears in */}
 
-             {/* Generates a list of stories the hero appears in */}
-
-          <h1> Stories </h1>
-
-          <Grid container justify="center" spacing={3}>
-            {marvelData.data.results[0].stories.items.map((item, k) => (
-              <Grid  key={k} item>
-                <p>| {"   " + item.name + "   "} |</p>
-              </Grid>
-            ))}
-          </Grid>
+            <StoriesList marvelData={marvelData} />
 
             {/* Generates a list of series the hero appears in */}
 
-          <h1> Series </h1>
-
-          <Grid container justify="center" spacing={3}>
-            {marvelData.data.results[0].series.items.map((item, l) => (
-              <Grid  key={l} item>
-                <p> | {"   " + item.name + "   "} | </p>
-              </Grid>
-            ))}
-          </Grid>
+            <SeriesList marvelData={marvelData} />
+          
         </div>
       </div>
     </div>
