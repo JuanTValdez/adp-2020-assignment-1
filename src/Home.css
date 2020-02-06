@@ -71,3 +71,15 @@ html {
   border: 1px solid white;
   border-radius: 25px;
 }
+
+.Home-Button{
+
+  background: #fb002a;
+  color: white;
+  border: 2px solid white;
+  padding: 5px 5px;
+  border-radius: 10px;
+  font-size: 21px;
+  
+
+}

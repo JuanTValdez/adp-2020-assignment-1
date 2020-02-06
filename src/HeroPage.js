@@ -47,15 +47,15 @@ const HeroPage = () => {
 
   return (
     <div className="Container">
-      <Header />
-
       
-      <div className="Wrapper-Div">
+      <Header />
+     
+     <div className="Wrapper-Div">
 
           {/* Generates Hero Card*/}
 
           <HeroCard marvelData={marvelData}/>
-
+          
         <div className="Hero-Details Border-Radius-Red">
             
             {/* Generates a list of comics the hero appears in */}
