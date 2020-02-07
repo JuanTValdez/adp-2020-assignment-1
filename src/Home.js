@@ -41,9 +41,6 @@ const App = () => {
       
       <Header />
 
-
-
-
       <div className="HeroGrid">
         <HeroGrid marvelData={marvelData} />
       </div>

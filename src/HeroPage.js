@@ -28,15 +28,6 @@ const HeroPage = () => {
     fetchApi();
   }, []);
 
-  // Notifies user data is being loaded
-
-  // if (!marvelData) {
-  //   return (
-  //     <button className="Gen-Button">
-  //       <b>Generating Data...</b>
-  //     </button>
-  //   );
-  // }
 
   if (!marvelData) {
     return (
@@ -60,15 +51,15 @@ const HeroPage = () => {
             
             {/* Generates a list of comics the hero appears in */}
 
-             <ComicsList marvelData={marvelData} />
+          <ComicsList marvelData={marvelData} />
           
             {/* Generates a list of stories the hero appears in */}
 
-            <StoriesList marvelData={marvelData} />
+          <StoriesList marvelData={marvelData} />
 
             {/* Generates a list of series the hero appears in */}
 
-            <SeriesList marvelData={marvelData} />
+          <SeriesList marvelData={marvelData} />
           
         </div>
       </div>

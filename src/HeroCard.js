@@ -1,16 +1,11 @@
 import React from 'react';
 import './Home.css'
-import { Button } from '@material-ui/core';
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 
 export default function HeroCard(props){
 
 
-
-const printMessage =function printMessage(){
-
-    console.log("HELLO ")
-}
 
     return(
          
@@ -44,7 +39,11 @@ const printMessage =function printMessage(){
                     </p>
                 </div>
                 
-                <button onClick={printMessage} className="Home-Button"> Return to Home </button>
+                <Link to={"/"}>
+                <div> 
+                <button className="Home-Button"> Return to Home </button>
+                </div>
+                </Link>
                 
             </div>
         
